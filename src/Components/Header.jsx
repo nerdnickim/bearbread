@@ -30,8 +30,6 @@ const HeaderTitle = styled.div`
 	font-size: 24px;
 `;
 
-const Div = styled.div``;
-
 const Header = () => {
 	const [state, setState] = useState({
 		isMenuOpen: false,

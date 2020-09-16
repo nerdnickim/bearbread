@@ -12,7 +12,7 @@ function App() {
 			<ThemeProvider theme={Theme}>
 				<GlobalStyle />
 				<Header />
-				<div style={{ marginTop: "50px", padding: "0 10px" }}>
+				<div style={{ marginTop: "50px" }}>
 					<Routes />
 				</div>
 				<Footer />
