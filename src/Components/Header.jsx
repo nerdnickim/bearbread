@@ -48,7 +48,7 @@ const Header = () => {
 					sidebar: {
 						backgroundColor: "white",
 						width: "80%",
-						zIndex: "10",
+						zIndex: "4",
 					},
 				}}
 			>

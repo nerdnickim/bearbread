@@ -1,17 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../Routes/Home";
 import PrdList from "../Routes/PrdList";
 import PrdDetail from "../Routes/PrdDetail";
 
 const Routes = () => (
-	<BrowserRouter>
+	<Router>
 		<Switch>
 			<Route path="/" exact={true} component={Home} />
 			<Route path="/prdList" component={PrdList} />
-			<Route path="/prdList/prdDetail" component={PrdDetail} />
+			<Route path="/:id" component={PrdDetail} />
 		</Switch>
-	</BrowserRouter>
+	</Router>
 );
 
 export default Routes;
