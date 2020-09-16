@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Sidebar from "react-sidebar";
 import bearLogo from "../Images/bear3.png";
 import { ShoppingCard, MenuIcon } from "./Icons";
+import Menu from "./Menu";
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -42,7 +43,7 @@ const Header = () => {
 	return (
 		<Wrapper>
 			<Sidebar
-				sidebar={<Div />}
+				sidebar={<Menu />}
 				open={state.isMenuOpen}
 				onSetOpen={toggleMenu}
 				styles={{
