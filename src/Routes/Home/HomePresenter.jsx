@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Wrapper = styled.div`
 	position: relative;
 	height: 100%;
+	font-family: "카페24 고운밤";
 `;
 
 const Contain = styled.div``;
@@ -19,12 +20,6 @@ const Banner = styled.div`
 	.swiper-slide {
 		background-color: grey;
 	}
-`;
-
-const Div = styled.div`
-	width: 100%;
-	height: 15px;
-	background-color: #d12c1a;
 `;
 
 const UnderLine = styled.div`
@@ -68,9 +63,9 @@ const Price = styled.span``;
 
 const Social = styled.div`
 	display: grid;
-	grid-template-columns: repeat(3, 100px);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+	grid-template-columns: repeat(3, 120px);
+    grid-column-gap: 14px;
+    grid-row-gap: 10px;
     justify-content: center;
 }
 `;
@@ -97,11 +92,10 @@ export default () => {
 						<SwiperSlide>Slide5</SwiperSlide>
 					</Swiper>
 				</Banner>
-				<Div />
 				<Category>
 					<CategoryTitle>NEW</CategoryTitle>
 					<Swiper
-						spaceBetween={20}
+						spaceBetween={10}
 						slidesPerView={3}
 						navigation
 						pagination={{ clickable: true }}
@@ -157,7 +151,7 @@ export default () => {
 				<Category>
 					<CategoryTitle>BEST</CategoryTitle>
 					<Swiper
-						spaceBetween={20}
+						spaceBetween={10}
 						slidesPerView={3}
 						navigation
 						pagination={{ clickable: true }}
@@ -213,7 +207,7 @@ export default () => {
 				<Category>
 					<CategoryTitle>PRODUCT</CategoryTitle>
 					<Swiper
-						spaceBetween={20}
+						spaceBetween={10}
 						slidesPerView={3}
 						navigation
 						pagination={{ clickable: true }}
@@ -265,7 +259,6 @@ export default () => {
 						</SwiperSlide>
 					</Swiper>
 				</Category>
-				<Div />
 				<Category>
 					<CategoryTitle>INSTAGRAM</CategoryTitle>
 					<Social>

@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+	font-family: "카페24 고운밤";
+`;
 
 const Contain = styled.div``;
 
 const Category = styled.h1`
 	width: 100%;
 	background: ${(props) => props.theme.mainBeige};
-	padding: 14px 20px;
+	padding: 8px 20px;
 `;
 
 const Dummy = styled.div`
@@ -45,12 +47,6 @@ const Buttons = styled.div`
 	}
 `;
 
-const Div = styled.div`
-	width: 100%;
-	height: 15px;
-	background-color: #d12c1a;
-`;
-
 const DetailInfos = styled.div`
 	display: flex;
 	width: 100%;
@@ -81,7 +77,6 @@ export default () => {
 					<div
 						style={{
 							display: "flex",
-							margin: "10px 0",
 							alignItems: "center",
 							justifyContent: "space-between",
 						}}
@@ -91,7 +86,6 @@ export default () => {
 					</div>
 					<span>배송비: 3000원.....</span>
 				</Info>
-				<Div />
 				<DetailInfos>
 					<button>DETAIL</button>
 					<button>REVIEW</button>

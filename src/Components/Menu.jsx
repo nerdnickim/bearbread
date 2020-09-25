@@ -10,6 +10,7 @@ const Wrapper = styled.div`
 	.active {
 		display: block;
 	}
+	font-family: "카페24 고운밤";
 `;
 
 const Contain = styled.div``;

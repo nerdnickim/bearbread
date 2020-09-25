@@ -8,6 +8,7 @@ import Menu from "./Menu";
 const Wrapper = styled.div`
 	width: 100%;
 	height: 20%;
+	font-family: "카페24 고운밤";
 `;
 
 const MunuButton = styled.div`

@@ -15,11 +15,12 @@ const Contain = styled.div`
 	justify-content: space-around;
 	padding: 30px 0;
 	margin-left: 40px;
+	line-height: 8px;
 `;
 
 const BusinessInfo = styled.h1`
 	font-weight: bolder;
-	font-size: 2rem;
+	font-size: 1rem;
 `;
 
 const Contact = styled.div`
@@ -33,7 +34,9 @@ const Info = styled.div``;
 
 const Div = styled.div``;
 
-const Span = styled.span``;
+const Span = styled.span`
+	font-size: 0.5rem;
+`;
 
 const Footer = () => {
 	return (
