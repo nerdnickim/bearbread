@@ -4,12 +4,11 @@ import { useHistory } from "react-router-dom";
 
 const Wrapper = styled.div`
 	min-height: 100vh;
-	font-family: "카페24 고운밤";
 `;
 
 const Contain = styled.div`
 	display: grid;
-	grid-template-columns: repeat(3, 120px);
+	grid-template-columns: repeat(3, 110px);
 	grid-column-gap: 14px;
 	grid-row-gap: 10px;
 	justify-content: center;
@@ -20,6 +19,9 @@ const Category = styled.h1`
 	background: ${(props) => props.theme.mainBeige};
 	padding: 6px 20px;
 	margin-bottom: 20px;
+	color: ${(props) => props.theme.brown};
+	letter-spacing: 2.3px;
+	font-family: "kbiz";
 `;
 
 const ProductInfo = styled.div`
@@ -38,9 +40,15 @@ const Dummy = styled.div`
 
 const ProductTitle = styled.h3`
 	padding: 10px 0;
+	font-weight: bolder;
+	font-size: 1.1rem;
+	color: ${(props) => props.theme.brown};
+	font-family: "카페24 고운밤";
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+	color: #9f7443;
+`;
 
 export default () => {
 	const history = useHistory();

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BearLogo from "../Images/bear2.png";
+import { Insta, Triangle } from "./Icons";
 
 const Wrapper = styled.div`
 	height: 100%;
@@ -21,17 +22,13 @@ const MenuHeader = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 0 10px;
+	span {
+		color: ${(props) => props.theme.brown};
+	}
 `;
 
 const MenuBody = styled.div`
 	padding: 0 10px;
-`;
-
-const MenuFooter = styled.div`
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
 `;
 
 const ImgContain = styled.div`
@@ -65,8 +62,11 @@ const Li = styled.li`
 
 	span {
 		font-size: 20px;
+		font-weight: bolder;
 	}
+	letter-spacing: 1.2px;
 	animation: all 0.45s linear;
+	color: ${(props) => props.theme.brown};
 `;
 
 const SubMenuUl = styled.ul`
@@ -76,24 +76,15 @@ const SubMenuUl = styled.ul`
 
 const SubMenuList = styled.li`
 	margin: 8px 0;
+	display: flex;
+	align-items: center;
+	svg {
+		margin-right: 4px;
+	}
 `;
 
-//MenuFooter
-
-const KakaoLogin = styled.div`
-	width: 100%;
-	height: 40px;
-	padding: 10px 0;
-	background-color: yellow;
-	text-align: center;
-`;
-
-const InstagramLogin = styled.div`
-	width: 100%;
-	height: 40px;
-	padding: 10px 0;
-	background-color: purple;
-	text-align: center;
+const InstaWrapper = styled.div`
+	margin: 0 10px;
 `;
 
 export default ({ isLoggedIn }) => {
@@ -116,7 +107,13 @@ export default ({ isLoggedIn }) => {
 					{isLoggedIn ? (
 						<span>USER NAME</span>
 					) : (
-						<span style={{ margin: "20px 0 10px", fontWeight: "bolder" }}>
+						<span
+							style={{
+								margin: "20px 0 10px",
+								fontWeight: "bolder",
+								letterSpacing: "2px",
+							}}
+						>
 							LOGIN/JOIN
 						</span>
 					)}
@@ -135,16 +132,31 @@ export default ({ isLoggedIn }) => {
 						<Li>
 							<span onClick={toggleMenuHandle}>BAKE</span>
 							<SubMenuUl>
-								<SubMenuList>DAQUOISE</SubMenuList>
-								<SubMenuList>MADELEINE</SubMenuList>
-								<SubMenuList>COOKIE</SubMenuList>
+								<SubMenuList>
+									<Triangle />
+									DAQUOISE
+								</SubMenuList>
+								<SubMenuList>
+									<Triangle />
+									MADELEINE
+								</SubMenuList>
+								<SubMenuList>
+									<Triangle />
+									COOKIE
+								</SubMenuList>
 							</SubMenuUl>
 						</Li>
 						<Li>
 							<span onClick={toggleMenuHandle}>BREAD</span>
 							<SubMenuUl>
-								<SubMenuList>SANDWICH</SubMenuList>
-								<SubMenuList>MUFFIN</SubMenuList>
+								<SubMenuList>
+									<Triangle />
+									SANDWICH
+								</SubMenuList>
+								<SubMenuList>
+									<Triangle />
+									MUFFIN
+								</SubMenuList>
 							</SubMenuUl>
 						</Li>
 						<Li>
@@ -157,15 +169,12 @@ export default ({ isLoggedIn }) => {
 							<span>GOODS</span>
 						</Li>
 					</Ul>
+					<InstaWrapper>
+						<a href="https://www.instagram.com/bearbread_official/">
+							<Insta />
+						</a>
+					</InstaWrapper>
 				</MenuBody>
-				<MenuFooter>
-					<KakaoLogin>
-						<span>KAKAOTALK</span>
-					</KakaoLogin>
-					<InstagramLogin>
-						<span>INSTAGRAM</span>
-					</InstagramLogin>
-				</MenuFooter>
 			</Contain>
 		</Wrapper>
 	);

@@ -21,21 +21,24 @@ const Contain = styled.div`
 const BusinessInfo = styled.h1`
 	font-weight: bolder;
 	font-size: 1rem;
+	color: ${(props) => props.theme.brown};
 `;
 
 const Contact = styled.div`
-	div {
-		margin: 6px 0;
-		padding: 4px 0;
-	}
+	font-family: "카페24 고운밤";
+	line-height: 0.9;
+	padding: 10px 0;
 `;
 
-const Info = styled.div``;
+const Info = styled.div`
+	font-family: "kbiz";
+`;
 
 const Div = styled.div``;
 
 const Span = styled.span`
 	font-size: 0.5rem;
+	color: ${(props) => props.theme.brown};
 `;
 
 const Footer = () => {

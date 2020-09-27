@@ -8,38 +8,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Wrapper = styled.div`
 	position: relative;
 	height: 100%;
-	font-family: "카페24 고운밤";
+	.swiper-pagination-bullet-active {
+		background: #223500;
+	}
 `;
 
 const Contain = styled.div``;
 
 const Banner = styled.div`
 	.swiper-wrapper {
-		height: 60vh;
+		height: 93vh;
 	}
 	.swiper-slide {
 		background-color: grey;
 	}
 `;
 
-const UnderLine = styled.div`
-	width: 90%;
-	height: 1px;
-	background: black;
-	margin: 0 auto;
-	margin: ;
-`;
-
 const Category = styled.section`
 	margin: 20px 0;
 	padding: 0 10px;
 	.swiper-container {
-		min-height: 200px;
+		min-height: 175px;
+	}
+	.swiper-pagination {
+		bottom: -2px;
 	}
 `;
 
 const CategoryTitle = styled.h1`
 	margin-bottom: 10px;
+	font-weight: bolder;
+	color: ${(props) => props.theme.brown};
 `;
 
 const ProductInfo = styled.div`
@@ -57,14 +56,20 @@ const Dummy = styled.div`
 
 const ProductTitle = styled.h3`
 	padding: 10px 0;
+	font-weight: bolder;
+	font-size: 1.1rem;
+	color: ${(props) => props.theme.brown};
+	font-family: "카페24 고운밤";
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+	color: #9f7443;
+`;
 
 const Social = styled.div`
 	display: grid;
-	grid-template-columns: repeat(3, 120px);
-    grid-column-gap: 14px;
+	grid-template-columns: repeat(3, 110px);
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: center;
 }
@@ -147,7 +152,7 @@ export default () => {
 						</SwiperSlide>
 					</Swiper>
 				</Category>
-				<UnderLine />
+
 				<Category>
 					<CategoryTitle>BEST</CategoryTitle>
 					<Swiper
@@ -203,7 +208,7 @@ export default () => {
 						</SwiperSlide>
 					</Swiper>
 				</Category>
-				<UnderLine />
+
 				<Category>
 					<CategoryTitle>PRODUCT</CategoryTitle>
 					<Swiper
@@ -262,6 +267,12 @@ export default () => {
 				<Category>
 					<CategoryTitle>INSTAGRAM</CategoryTitle>
 					<Social>
+						<Dummy />
+						<Dummy />
+						<Dummy />
+						<Dummy />
+						<Dummy />
+						<Dummy />
 						<Dummy />
 						<Dummy />
 						<Dummy />

@@ -1,3 +1,4 @@
 export default {
-	mainBeige: "#ecd7bd",
+	mainBeige: "#FFE3C9",
+	brown: "#42210B",
 };

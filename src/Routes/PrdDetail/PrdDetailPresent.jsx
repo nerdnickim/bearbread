@@ -11,20 +11,29 @@ const Category = styled.h1`
 	width: 100%;
 	background: ${(props) => props.theme.mainBeige};
 	padding: 8px 20px;
+	color: ${(props) => props.theme.brown};
+	letter-spacing: 2.3px;
+	font-family: "kbiz";
 `;
 
 const Dummy = styled.div`
 	width: 100%;
-	height: 60vh;
+	height: 50vh;
 	background: grey;
 `;
 
 const Info = styled.div`
 	padding: 20px 10px;
+	span {
+		color: ${(props) => props.theme.brown};
+	}
 `;
 
 const Title = styled.h2`
 	font-size: 30px;
+	font-weight: bolder;
+	color: ${(props) => props.theme.brown};
+	margin-bottom: 10px;
 `;
 
 const Buttons = styled.div`
@@ -38,12 +47,15 @@ const Buttons = styled.div`
 		border: none;
 		padding: 10px 0;
 		font-size: 20px;
+		font-family: "카페24 고운밤";
 	}
 	button:first-child {
 		background: ${(props) => props.theme.mainBeige};
+		color: #4e2d05;
 	}
 	button:nth-child(2) {
 		background: #4e2d05;
+		color: ${(props) => props.theme.mainBeige};
 	}
 `;
 
@@ -55,16 +67,29 @@ const DetailInfos = styled.div`
 		outline: none;
 		border: none;
 		padding: 10px 0;
-		font-size: 20px;
+		font-size: 17px;
+		font-family: "카페24 고운밤";
+		letter-spacing: 2.3px;
+	}
+	button:not(:last-child) {
+		margin-right: 10px;
 	}
 	button:first-child {
-		background: #4e2d05;
+		background: ${(props) => props.theme.brown};
+		color: ${(props) => props.theme.mainBeige};
 	}
 
 	button:nth-child(2),
 	button:nth-child(3) {
 		background: ${(props) => props.theme.mainBeige};
+		color: #4e2d05;
 	}
+`;
+
+const Div = styled.div`
+	width: 100%;
+	height: 5px;
+	background: #4e2d05;
 `;
 
 export default () => {
@@ -82,7 +107,7 @@ export default () => {
 						}}
 					>
 						<Title>초코 브라우니</Title>
-						<span>2,500원</span>
+						<span style={{ fontSize: "1.3rem" }}>2,500원</span>
 					</div>
 					<span>배송비: 3000원.....</span>
 				</Info>
@@ -91,6 +116,7 @@ export default () => {
 					<button>REVIEW</button>
 					<button>Q&amp;A</button>
 				</DetailInfos>
+				<Div />
 				<Dummy />
 				<Dummy />
 				<Dummy />

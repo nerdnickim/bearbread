@@ -8,27 +8,31 @@ import Menu from "./Menu";
 const Wrapper = styled.div`
 	width: 100%;
 	height: 20%;
-	font-family: "카페24 고운밤";
 `;
 
 const MunuButton = styled.div`
 	cursor: pointer;
-	fill: #a05c0e;
+	fill: ${(props) => props.theme.brown};
 `;
 
 const HeaderInfo = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
+	align-items: center;
+	svg {
+		fill: ${(props) => props.theme.brown};
+	}
 `;
-
-const ImgContain = styled.div``;
 
 const HeaderTitle = styled.div`
 	display: flex;
 	align-items: center;
 	font-weight: bolder;
-	font-size: 24px;
+	font-size: 28px;
+	span {
+		color: ${(props) => props.theme.brown};
+	}
 `;
 
 const Header = () => {
@@ -58,14 +62,7 @@ const Header = () => {
 						<MenuIcon />
 					</MunuButton>
 					<HeaderTitle>
-						<ImgContain>
-							<img
-								src={bearLogo}
-								style={{ width: "28px", height: "28px" }}
-								alt="bearLogo"
-							/>
-						</ImgContain>
-						<span>BEAR BREAD</span>
+						<span style={{ fontFamily: "oskarRegular" }}>BEAR BREAD</span>
 					</HeaderTitle>
 					<ShoppingCard />
 				</HeaderInfo>
